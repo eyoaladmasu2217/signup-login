@@ -34,6 +34,9 @@
 			<input type="password" name="signupPassword" id="signupPassword" placeholder="">
 		</div>
 		<button class="sign" id="signupBtn">Sign up</button>
+		<p class="signup" id="loginText">Already have an account?
+			<a rel="noopener noreferrer" href="#" id="showLogin">Login</a>
+		</p>
 	</form>
 	<div class="social-message">
 		<div class="line"></div>
@@ -67,6 +70,13 @@
 		document.getElementById('loginForm').style.display = 'none';
 		document.getElementById('signupForm').style.display = 'block';
 		document.getElementById('formTitle').innerText = 'Sign Up';
+	});
+
+	document.getElementById('showLogin').addEventListener('click', function(event) {
+		event.preventDefault();
+		document.getElementById('signupForm').style.display = 'none';
+		document.getElementById('loginForm').style.display = 'block';
+		document.getElementById('formTitle').innerText = 'Login';
 	});
 
 	document.getElementById('signinBtn').addEventListener('click', function(event) {
